@@ -33,7 +33,7 @@ For more info, read [Guard usage doc](https://github.com/guard/guard#readme)
 ``` ruby
 :src_path => ".", # source path to be scanned for tags (default `src`)
 :vendor_path => ".", # source path to be scanned for vendor tags (default `vendor`)
-:emacs => false, # run ctags in emacs mode and merge tags and gems.tags into TAGS file
+:emacs => false, # run ctags in emacs mode and merge `tags` and `vendor.tags` into `TAGS` file
 ```
 
 For a typical [Symfony2](http://symfony.com/) application, `Guardfile` can look like this (default):
