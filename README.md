@@ -24,7 +24,9 @@ Add a basic setup to your `Guardfile`:
 
 ## Usage
 
-Please, read [Guard usage doc](https://github.com/guard/guard#readme)
+    $ guard
+
+For more info, read [Guard usage doc](https://github.com/guard/guard#readme)
 
 ## Guardfile Options
 
