@@ -56,7 +56,7 @@ In ubuntu you can install ctags by running
 
 ## Vim
 
-Vim supports ctags by default. All you need to do is add your `gems.tags` file to the Vim's tag stack.
+Vim supports ctags by default. All you need to do is add your `vendor.tags` file to the Vim's tag stack.
 
     set tags+=vendor.tags
 
