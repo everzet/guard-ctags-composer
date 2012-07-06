@@ -36,7 +36,7 @@ For more info, read [Guard usage doc](https://github.com/guard/guard#readme)
 :emacs => false, # run ctags in emacs mode and merge tags and gems.tags into TAGS file
 ```
 
-For a typical Rails application, `Guardfile` can look like this (default):
+For a typical [Symfony2](http://symfony.com/) application, `Guardfile` can look like this (default):
 
     guard 'ctags-composer', :src_path => ["src"], :vendor_path => ["vendor"] do
       watch(/^(src)\/.*\.php/)
