@@ -33,6 +33,7 @@ For more info, read [Guard usage doc](https://github.com/guard/guard#readme)
 ``` ruby
 :src_path => ".", # source path to be scanned for tags (default `src`)
 :vendor_path => ".", # source path to be scanned for vendor tags (default `vendor`)
+:name_patterns => ["\\*.php", "\\*.yml"], # name patterns to search for (default `["\\*.php"]`)
 :emacs => false, # run ctags in emacs mode and merge `tags` and `vendor.tags` into `TAGS` file
 ```
 
