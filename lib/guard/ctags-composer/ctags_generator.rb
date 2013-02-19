@@ -4,6 +4,7 @@ module Guard
       class CtagsGenerator
         def initialize(opts = {})
           @opts = opts
+          @opts[:name_patterns] = @opts[:name_patterns] || ['\\*.php']
         end
 
         def generate_project_tags
@@ -21,8 +22,15 @@ module Guard
             path = path.join(' ').strip
           end
 
-          cmd = "find #{path} -type f -name \\*.php | ctags -f #{tag_file} -L -"
+          name_patterns = ''
+          if @opts[:name_patterns].instance_of?(Array)
+            name_patterns = ' -name '
+            name_patterns << @opts[:name_patterns].join(' -or -name ').strip
+          end
+
+          cmd = "find #{path} -type f #{name_patterns} | ctags -f #{tag_file} -L -"
           cmd << " -e" if @opts[:emacs]
+
           system(cmd)
           system("cat tags vendor.tags > TAGS") if @opts[:emacs]
         end
