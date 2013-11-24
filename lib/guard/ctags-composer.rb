@@ -11,8 +11,8 @@ module Guard
 
     def start
       UI.info 'Guard::CtagsComposer is running!'
-      @ctags_generator.generate_vendor_tags
       @ctags_generator.generate_project_tags
+      @ctags_generator.generate_vendor_tags
     end
 
     def run_on_changes(paths)
