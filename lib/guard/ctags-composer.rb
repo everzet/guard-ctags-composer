@@ -1,4 +1,4 @@
-require "guard/ctags-composer/ctags_generator"
+require 'guard/ctagscomposer/ctags_generator'
 require 'guard'
 require 'guard/guard'
 
